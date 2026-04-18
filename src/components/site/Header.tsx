@@ -90,7 +90,7 @@ const MoreDropdown = () => {
         className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-1 ${
           isMoreActive || open
             ? "bg-white text-green-600"
-            : "bg-transparent text-white hover:bg-white hover:text-black"
+            : "text-white hover:bg-white hover:text-black"
         }`}
       >
         MORE
@@ -255,8 +255,8 @@ export const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-2 ml-auto">
+          {/* Desktop Nav => visible only above 768px */}
+          <nav className="hidden min-[769px]:flex items-center gap-2 ml-auto">
             {NAV.map((item) => {
               const active = location.pathname === item.path;
 
@@ -278,29 +278,29 @@ export const Header = () => {
             <MoreDropdown />
           </nav>
 
-          {/* Login Dropdown */}
-          <div className="hidden lg:block ml-4">
+          {/* Login => visible only above 768px */}
+          <div className="hidden min-[769px]:block ml-4">
             <LoginDropdown />
           </div>
 
-          {/* Mobile Menu */}
+          {/* Burger => appears at 768px and below */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-white"
+            className="min-[769px]:hidden text-white"
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ height: 0 }}
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
-            className="md:hidden bg-black border-t border-white/10 overflow-hidden"
+            className="min-[769px]:hidden bg-black border-t border-white/10 overflow-hidden"
           >
             <div className="px-5 py-5 space-y-3">
               {NAV.map((item) => (
