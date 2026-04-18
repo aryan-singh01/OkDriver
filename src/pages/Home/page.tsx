@@ -255,17 +255,17 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Section label */}
+                
                   <p className="text-[15px] font-semibold text-white px-0.5">Safety Features</p>
 
-                  {/* 2×2 feature grid */}
+                 
                   <div className="grid grid-cols-2 gap-3">
                     {featureCards.map((card) => (
                       <div
                         key={card.title}
                         className={`${card.color} rounded-2xl p-3.5 flex flex-col justify-between h-[130px]`}
                       >
-                        {/* Top row: icon + chevron */}
+                     
                         <div className="flex items-start justify-between">
                           <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
                             {card.icon}
@@ -273,7 +273,7 @@ export default function Home() {
                           <IconChevron />
                         </div>
 
-                        {/* Bottom: title + subtitle */}
+                   
                         <div>
                           <p className="text-[13px] font-semibold text-white leading-snug whitespace-pre-line">
                             {card.title}
@@ -286,7 +286,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  {/* Spacer */}
+                 
                   <div className="h-2" />
                 </div>
 
@@ -313,7 +313,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* OkDriver Assistant bar — outside phone, below */}
+          
               <div className="absolute -bottom-14 left-1/2 -translate-x-1/2 w-[300px]
                               rounded-2xl bg-[#1c1c1e]/90 border border-white/10
                               backdrop-blur-xl px-5 py-3.5 flex items-center justify-between shadow-2xl">
@@ -339,5 +339,6 @@ export default function Home() {
       <CTA />
       <Footer />
     </>
+
   );
 }
