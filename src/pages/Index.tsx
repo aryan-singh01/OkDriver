@@ -1,5 +1,5 @@
 import { Header } from "@/components/site/Header";
-import { Hero } from "@/components/site/Hero";
+import Home from "@/pages/Home/page";
 import { OnboardingSection } from "@/components/site/OnboardingSection";
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { ScooterFleet } from "@/components/site/ScooterFleet";
@@ -11,14 +11,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background font-body">
       <Header />
+
       <main>
-        <Hero />
+        <Home />
         <OnboardingSection />
         <HowItWorks />
         <ScooterFleet />
         <Benefits />
         <CTA />
       </main>
+
       <Footer />
     </div>
   );
